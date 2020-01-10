@@ -16,7 +16,7 @@ public class FizzBuzzServiceTest {
 
     @Test
     void multiply_test(){
-        //2,3,5,7,21,70
+        //2,3,5,7,21
         Assertions.assertEquals("2",service.fizzBuzz(2));
         Assertions.assertEquals("Fizz",service.fizzBuzz(3));
         Assertions.assertEquals("Buzz",service.fizzBuzz(5));
@@ -24,7 +24,7 @@ public class FizzBuzzServiceTest {
 //        Assertions.assertEquals("FizzBuzz",service.fizzBuzz(15));
         Assertions.assertEquals("FizzWhizz",service.fizzBuzz(21));
 //        Assertions.assertEquals("BuzzWhizz",service.fizzBuzz(35));
-        Assertions.assertEquals("BuzzWhizz",service.fizzBuzz(70));
+//        Assertions.assertEquals("BuzzWhizz",service.fizzBuzz(70));
 //        Assertions.assertEquals("FizzBuzzWhizz",service.fizzBuzz(105));
     }
 
@@ -48,8 +48,9 @@ public class FizzBuzzServiceTest {
     @Test
     void contain7_test(){
         //包含7时，忽略包含5和被5整除
-        //75
+        //75,70
         Assertions.assertEquals("Fizz",service.fizzBuzz(75));
+        Assertions.assertEquals("Whizz",service.fizzBuzz(70));
 
     }
 
