@@ -8,11 +8,11 @@ public class FizzBuzzService {
 
     public String fizzBuzz(int index){
         StringBuffer result = new StringBuffer("");
-        if(contain3(index) && !contain5(index)){
+        if(containNumber(index,3) && !containNumber(index,5)){
             result.append(FIZZ);
         }else {
-            if (multiply3(index) && (!contain5(index) || contain7(index))) result.append(FIZZ);
-            if (multiply5(index) && !contain7(index)) result.append(BUZZ);
+            if (multiply3(index) && (!containNumber(index,5) || containNumber(index,7))) result.append(FIZZ);
+            if (multiply5(index) && !containNumber(index,7)) result.append(BUZZ);
             if (multiply7(index)) result.append(WHIZZ);
             if (result.length() == 0) result.append(index);
         }
@@ -34,29 +34,11 @@ public class FizzBuzzService {
         return false;
     }
 
-    private boolean contain3(int index){
-        while (index > 0){
-            int num = index % 10;
-            if (num == 3) return true;
-            index = index / 10;
-        }
-        return false;
-    }
-
-    private boolean contain5(int index){
-        while (index > 0){
-            int num = index % 10;
-            if (num == 5) return true;
-            index = index / 10;
-        }
-        return false;
-    }
-
-    private boolean contain7(int index){
-        while (index > 0){
-            int num = index % 10;
-            if (num == 7) return true;
-            index = index / 10;
+    private boolean containNumber(int number1,int number2){
+        while(number1 > 0){
+            int num = number1 % 10;
+            if(num == number2) return true;
+            number1 = number1 / 10;
         }
         return false;
     }
