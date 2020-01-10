@@ -1,13 +1,19 @@
+import javafx.beans.binding.When;
+
 public class FizzBuzzService {
+
+    public static final String FIZZ = "Fizz";
+    public static final String BUZZ = "Buzz";
+    public static final String WHIZZ = "Whizz";
 
     public String fizzBuzz(int index){
         StringBuffer result = new StringBuffer("");
         if(contain3(index) && !contain5(index)){
-            result.append("Fizz");
+            result.append(FIZZ);
         }else {
-            if (multiply3(index) && (!contain5(index) || contain7(index))) result.append("Fizz");
-            if (multiply5(index) && !contain7(index)) result.append("Buzz");
-            if (multiply7(index)) result.append("Whizz");
+            if (multiply3(index) && (!contain5(index) || contain7(index))) result.append(FIZZ);
+            if (multiply5(index) && !contain7(index)) result.append(BUZZ);
+            if (multiply7(index)) result.append(WHIZZ);
             if (result.length() == 0) result.append(index);
         }
         return result.toString();
