@@ -46,11 +46,12 @@ public class FizzBuzzServiceTest {
 
     @Test
     void contain7_test(){
-        //75,70,17,107
+        //75,70,17,107,73
         Assertions.assertEquals("Flzz",service.fizzBuzz(75));
         Assertions.assertEquals("Flzz",service.fizzBuzz(70));
         Assertions.assertEquals("Flzz",service.fizzBuzz(17));
         Assertions.assertEquals("Flzz",service.fizzBuzz(107));
+        Assertions.assertEquals("Flzz",service.fizzBuzz(73));
     }
 
 }
