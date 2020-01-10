@@ -16,11 +16,11 @@ public class FizzBuzzServiceTest {
 
     @Test
     void multiply_test(){
-        //2,3,5,7,21
+        //2,3,10,14,21
         Assertions.assertEquals("2",service.fizzBuzz(2));
         Assertions.assertEquals("Fizz",service.fizzBuzz(3));
-        Assertions.assertEquals("Buzz",service.fizzBuzz(5));
-        Assertions.assertEquals("Whizz",service.fizzBuzz(7));
+        Assertions.assertEquals("Buzz",service.fizzBuzz(10));
+        Assertions.assertEquals("Whizz",service.fizzBuzz(14));
 //        Assertions.assertEquals("FizzBuzz",service.fizzBuzz(15));
         Assertions.assertEquals("FizzBuzz",service.fizzBuzz(60));
         Assertions.assertEquals("FizzWhizz",service.fizzBuzz(21));
@@ -38,7 +38,8 @@ public class FizzBuzzServiceTest {
 
     @Test
     void contain5_test(){
-        //35,15,105
+        //5,35,15,105
+        Assertions.assertEquals("BuzzWhizz",service.fizzBuzz(5));
         Assertions.assertEquals("BuzzWhizz",service.fizzBuzz(35));
         Assertions.assertEquals("BuzzWhizz",service.fizzBuzz(15));
         Assertions.assertEquals("BuzzWhizz",service.fizzBuzz(105));
@@ -46,7 +47,8 @@ public class FizzBuzzServiceTest {
 
     @Test
     void contain7_test(){
-        //75,70,17,107,73
+        //7,75,70,17,107,73
+        Assertions.assertEquals("Flzz",service.fizzBuzz(7));
         Assertions.assertEquals("Flzz",service.fizzBuzz(75));
         Assertions.assertEquals("Flzz",service.fizzBuzz(70));
         Assertions.assertEquals("Flzz",service.fizzBuzz(17));
