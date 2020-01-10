@@ -36,4 +36,15 @@ public class FizzBuzzServiceTest {
         Assertions.assertEquals("Fizz",service.fizzBuzz(35));
     }
 
+    @Test
+    void contain5_test(){
+        //包含5时，忽略包含3和被3整除
+    }
+
+    @Test
+    void contain7_test(){
+        //包含7时，忽略包含5和被5整除
+
+    }
+
 }
