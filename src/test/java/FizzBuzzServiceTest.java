@@ -30,20 +30,25 @@ public class FizzBuzzServiceTest {
 
     @Test
     void contain3_test(){
-        //13,30,35
+        //13,30
         Assertions.assertEquals("Fizz",service.fizzBuzz(13));
         Assertions.assertEquals("Fizz",service.fizzBuzz(30));
-        Assertions.assertEquals("Fizz",service.fizzBuzz(35));
+//        Assertions.assertEquals("Fizz",service.fizzBuzz(35));
     }
 
     @Test
     void contain5_test(){
         //包含5时，忽略包含3和被3整除
+        //15,35,65
+        Assertions.assertEquals("Buzz",service.fizzBuzz(15));
+        Assertions.assertEquals("BuzzWhizz",service.fizzBuzz(35));
     }
 
     @Test
     void contain7_test(){
         //包含7时，忽略包含5和被5整除
+        //75
+        Assertions.assertEquals("Fizz",service.fizzBuzz(75));
 
     }
 
